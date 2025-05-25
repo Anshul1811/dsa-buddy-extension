@@ -20,10 +20,10 @@ let helperController = {
         const { question, description, code, userPrompt } = req.body;
 
        // Save the question and userPrompt to the database
-        const savedQuestion = await Question.create({
-          question,
-          userPrompt,
-        });
+        // const savedQuestion = await Question.create({
+        //   question,
+        //   userPrompt,
+        // });
 
         const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
         
