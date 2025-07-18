@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "LeetCode Copilot",
+  "version": "1.0",
+  "description": "Get AI help with LeetCode DSA problems without going anywhere.",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["https://*.leetcode.com/*", "https://leetcode.com/problems/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.leetcode.com/problems/*"],
+      "js": ["content.js"],
+      "css": ["content.css"]
+    }
+  ],
+  "action": {
+    "default_title": "LeetCode Copilot",
+    "default_icon": {
+      "16": "images/icon.png"
+    }
+  }
+}
